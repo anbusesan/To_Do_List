@@ -1,0 +1,149 @@
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #8d319593, #11c8cb00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/* To-Do List Container */
+.container {
+    width: clamp(300px, 50%, 600px);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles */
+#main-header {
+    background: linear-gradient(135deg, #590629cb, #ff758c);
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgb(255, 117, 140);
+    position: relative;
+    overflow: hidden;
+}
+
+#main-header::before,
+#main-header::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+#main-header::before {
+    top: -20px;
+    left: -20px;
+}
+
+#main-header::after {
+    bottom: -20px;
+    right: -20px;
+}
+
+#header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+#header-title i {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.549);
+    animation: bounce 1s infinite alternate;
+}
+
+
+/* To-Do List Card */
+.card {
+    position: relative;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    /* backdrop-filter: blur(15px); */
+    padding: 5%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 2;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+
+/* Input Field */
+.input-group {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+#inputField {
+    font-size: 1.2rem;
+    padding: 10px;
+    background: rgba(29, 1, 1, 0.112);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: black;
+    flex-grow: 1;
+}
+
+#inputField::placeholder {
+    color: rgba(24, 1, 1, 0.7);
+}
+
+/* Buttons */
+.btn-success {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    transition: 0.3s;
+    background: #34d399;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 255, 127, 0.3);
+    flex-shrink: 0;
+}
+
+.btn-success:hover {
+    background: #10b981;
+    box-shadow: 0 6px 15px rgba(0, 255, 127, 0.5);
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
+}
+
